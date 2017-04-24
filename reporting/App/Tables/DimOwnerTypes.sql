@@ -4,7 +4,7 @@ CREATE TABLE [App].[DimOwnerTypes]
 (
 	[Key]   tinyint         not null,
 	[Code]  nvarchar(2)     not null,
-	[Name]  nvarchar(40)    not null,
+	[Name]  nvarchar(50)    not null,
 	
 	constraint [PK_DimOwnerTypes] PRIMARY KEY CLUSTERED ( [Key] )
 );

@@ -8,7 +8,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{a4380134-f398-43b4-913c-51f1f9d890b5}</ProjectGuid>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
@@ -61,9 +61,6 @@
     <Folder Include="Security\Schemas" />
     <Folder Include="App" />
     <Folder Include="App\Tables" />
-    <Folder Include="Post-Deployment Scripts" />
-    <Folder Include="dbo" />
-    <Folder Include="dbo\Stored Procedures" />
     <Folder Include="App\Stored Procedures" />
   </ItemGroup>
   <ItemGroup>
@@ -71,17 +68,15 @@
     <Build Include="Security\Schemas\DAL.sql" />
     <Build Include="App\Tables\StationDump.sql" />
     <Build Include="App\Tables\DimFuelTypes.sql" />
-    <Build Include="dbo\Stored Procedures\ManageFuelTypes.sql" />
     <Build Include="App\Tables\DimOwnerTypes.sql" />
-    <Build Include="dbo\Stored Procedures\ManageOwnerTypes.sql" />
-    <Build Include="App\Tables\DimState.sql" />
-    <Build Include="dbo\Stored Procedures\ManageStates.sql" />
+    <Build Include="App\Tables\DimStates.sql" />
     <Build Include="App\Tables\DimCities.sql" />
     <Build Include="App\Tables\FactStation.sql" />
     <Build Include="App\Tables\DimFederalAgencies.sql" />
     <Build Include="App\Stored Procedures\LoadDataMart.sql" />
   </ItemGroup>
   <ItemGroup>
-    <PostDeploy Include="Post-Deployment Scripts\Script.PostDeployment1.sql" />
+    <None Include="reporting.publish.xml" />
+    <None Include="reporting.aws.publish.xml" />
   </ItemGroup>
 </Project>
